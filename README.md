@@ -30,7 +30,7 @@ Explicación del algoritmo (resumen):
 - Se calcula la cerradura epsilon del estado inicial.
 - Se generan estados del AFD como subconjuntos de estados del AFND (cerraduras incluidas).
 - Para cada nuevo subconjunto y para cada símbolo del alfabeto se calcula el conjunto de estados alcanzables (mover) y su cerradura epsilon.
-- Si aparece un subconjunto vacío se añade un estado trampa.
+- Si aparece un subconjunto vacío se añade un estado trampa o error referenciado con el simbolo ∅.
 - Se marcan como finales aquellos subconjuntos que contengan algún estado final del AFND.
 
 Archivos importantes:
@@ -40,4 +40,4 @@ Archivos importantes:
 - `src/components/AutomataForm.jsx`: formulario de entrada.
 - `src/components/ConversionSteps.jsx`: pasos y tabla de transición.
 
-Hecho en español para uso académico.
+
