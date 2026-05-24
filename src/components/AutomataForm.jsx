@@ -6,12 +6,12 @@ export default function AutomataForm({
   onLoadEjemplo,
   onClear,
 }) {
-  const [estados, setEstados] = useState("q0 q1 q2");
-  const [alfabeto, setAlfabeto] = useState("a b");
-  const [estadoInicial, setEstadoInicial] = useState("q0");
-  const [estadosFinales, setEstadosFinales] = useState("q2");
+  const [estados, setEstados] = useState("A B C");
+  const [alfabeto, setAlfabeto] = useState("0 1");
+  const [estadoInicial, setEstadoInicial] = useState("A");
+  const [estadosFinales, setEstadosFinales] = useState("C");
   const [transiciones, setTransiciones] = useState(
-    "q0,a,q0|q1\nq0,b,q0\nq1,b,q2\nq1,ε,q2",
+    "A,0,A|B\nA,1,B|C\nB,0,B|C\nC,0,C",
   );
 
   // Exponer valores al padre
